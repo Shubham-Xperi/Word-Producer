@@ -38,3 +38,12 @@ tasks.named('bootBuildImage') {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+task startKafka {
+	doLast {
+		exec {
+			commandLine 'sh', '-c', 'bin/zookeeper-server-start.sh config/zookeeper.properties &'
+			commandLine 'sh', '-c', 'bin/kafka-server-start.sh config/server.properties'
+		}
+	}
+}
