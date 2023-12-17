@@ -1,0 +1,13 @@
+package com.shubhogurpreet.wordproducer;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class WordProducerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(WordProducerApplication.class, args);
+	}
+
+}
